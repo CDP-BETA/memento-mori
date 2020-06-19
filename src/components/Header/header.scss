@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  padding-left: 20px;
+  background: #818181;
+  color: #fff;
+  p {
+    margin: 20px 10px;
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
