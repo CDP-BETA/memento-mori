@@ -1,4 +1,4 @@
-const { addDecoratorsLegacy, disableEsLint, addBabelPlugins, addWebpackPlugin, fixBabelImports, override } = require('customize-cra')
+const { addDecoratorsLegacy, disableEsLint, addBabelPlugins, addWebpackPlugin, addWebpackAlias, fixBabelImports, override } = require('customize-cra')
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const mode = process.env.NODE_ENV === 'development' ? 'dev' : 'prod'
@@ -67,11 +67,9 @@ const scssLoader = () => (config) => {
     {
       loader: 'sass-loader',
       options: {
-        lessOptions: {
-          javascriptEnabled: true,
-          modifyVars: {
-            hack: `true; @import "${path.resolve(__dirname, './src/constants/variable.scss')}";`,
-          },
+        javascriptEnabled: true,
+        modifyVars: {
+          hack: `true; @import "${path.resolve(__dirname, './src/constants/variable.scss')}";`,
         },
       },
     },
@@ -86,6 +84,16 @@ const scssLoader = () => (config) => {
   })
   return config
 }
+
+const htmlLoader = () => (config) => {
+  const loaders = config.module.rules.find((rule) => Array.isArray(rule.oneOf)).oneOf
+  loaders.splice(loaders.length - 1, 0, {
+    test: /\.html$/,
+    loader: 'html-loader',
+  })
+  return config
+}
+
 
 module.exports = override(
   fixBabelImports('import', {
@@ -120,5 +128,10 @@ module.exports = override(
       chunkFilename: mode === 'dev' ? '[id].css' : '[id].[hash].css',
     })
   ),
-  scssLoader()
+  addWebpackAlias({
+    ['src']: path.resolve(__dirname, 'src'),
+  }),
+  scssLoader(),
+  htmlLoader()
+
 )
