@@ -31,7 +31,7 @@ const App = observer(() => {
   return (
     <Provider {...stores}>
       <Router history={browserHistory}>
-        <Header/>
+        <Header />
         {store.storeLoaded ? (
           <Switch>
             <Route exact path={'/'} component={HomePage} />
