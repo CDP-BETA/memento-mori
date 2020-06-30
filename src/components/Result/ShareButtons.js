@@ -19,7 +19,7 @@ const ShareButton = () => {
 
   return (
     <div className={'shareContainer'}>
-      <img src={shareIcon} alt={'share_btn'}/>
+      <img src={shareIcon} alt={'share_btn'} onClick={() => clickShare()}/>
     </div>
   )
 }
