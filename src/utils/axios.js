@@ -21,7 +21,7 @@ const axiosApi = (url, method = 'GET', data, options = {}) => {
   }
   return axios(config).then((response) => {
     const { data } = response
-    return response
+    return data
   })
 }
 

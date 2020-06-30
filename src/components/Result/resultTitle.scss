@@ -1,0 +1,24 @@
+.titleContainer {
+  width: 100%;
+  margin-top: 6.25rem;
+  margin-bottom: 0;
+  .title {
+    margin: 0;
+    text-shadow: 1.9px 1.6px 4px #160e18;
+    -webkit-text-stroke: 0.5px #ffffff;
+    font-family: 'IropkeBatang', serif;
+    font-size: 1.9rem;
+    line-height: 1.33;
+    letter-spacing: normal;
+    em {
+      padding-left: 10px;
+      text-decoration: none;
+      font-style: normal;
+      color: #fff700;
+    }
+  }
+  .sub {
+    margin: 10px 0 0;
+    font-size: 11px;
+  }
+}

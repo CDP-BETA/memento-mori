@@ -11,40 +11,44 @@ export default class DataStore {
     this.totalStep = 13
     this.questionModel = new QuestionModel()
     this.userAnswers = {
-      sex: null,
+      male: null,
       pneumonia: null,
-      high_blood_pressure: null,
+      hypertension: null,
       chest_pain: null,
-      respiratory_failure: null,
+      respiratory_disorder: null,
       anemia: null,
       diabetes: null,
       hypoglycemia: null,
       fever: null,
-      cardiovascular_disease: null,
+      mace: null,
       abdominal_pain: null,
       pancreatitis: null,
-      spouse: null
+      married: null
     }
-    this.result = {}
+    this.result = {
+      age: null,
+      shap: []
+    }
   }
 
-  verifyAnswers = () => {
+  verifyAnswers = async () => {
     for(let key in this.userAnswers) {
       if (typeof this.userAnswers[key] !== 'number') {
         return false
       }
     }
     const answers = {
-      answers: this.userAnswers
+      answer: this.userAnswers
     }
-    return predictDeath(answers)
+    return await predictDeath(answers)
   }
 
   @action
-  stepNext = async () => {
+  stepNext = (history) => {
     if(this.step === 12) {
-      await this.verifyAnswers().then(({ data }) => {
+      this.verifyAnswers().then((data ) => {
         this.result = data
+        history.push('/result')
       })
       return
     }

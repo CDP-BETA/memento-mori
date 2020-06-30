@@ -19,7 +19,7 @@ export default class QuestionModel {
     this.questionList = [
       {
         question: '내 성별은',
-        key: 'sex',
+        key: 'male',
         answers: ['남자', '여자'],
         answerIcons: [manNormalIcon, womanNormalIcon],
         selectedAnswerIcons: [manSelectIcon, womanSelectIcon]
@@ -33,7 +33,7 @@ export default class QuestionModel {
       },
       {
         question: '난 고혈압이',
-        key: 'high_blood_pressure',
+        key: 'hypertension',
         answers: ['있다', '없다'],
         answerIcons: [oNormalIcon, xNormalIcon],
         selectedAnswerIcons: [oSelectIcon, xSelectIcon]
@@ -47,7 +47,7 @@ export default class QuestionModel {
       },
       {
         question: '난 호흡기 질환이',
-        key: 'respiratory_failure',
+        key: 'respiratory_disorder',
         answers: ['있다', '없다'],
         answerIcons: [oNormalIcon, xNormalIcon],
         selectedAnswerIcons: [oSelectIcon, xSelectIcon]
@@ -83,7 +83,7 @@ export default class QuestionModel {
       },
       {
         question: '난 심혈관 질환이',
-        key: 'cardiovascular_disease',
+        key: 'mace',
         answers: ['있다', '없다'],
         answerIcons: [oNormalIcon, xNormalIcon],
         selectedAnswerIcons: [oSelectIcon, xSelectIcon]
@@ -104,7 +104,7 @@ export default class QuestionModel {
       },
       {
         question: '난 배우자가',
-        key: 'spouse',
+        key: 'married',
         answers: ['있다', '없다'],
         answerIcons: [oNormalIcon, xNormalIcon],
         selectedAnswerIcons: [oSelectIcon, xSelectIcon]

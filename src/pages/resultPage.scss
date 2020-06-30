@@ -1,0 +1,21 @@
+.resultPage {
+  margin: 0 0;
+  background: url("../assets/images/result_bg@2x.png") no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  color: #ffffff;
+  text-align: left;
+  padding: 0 42.5px;
+  font-weight: normal;
+  max-width: 700px;
+  max-height: 1400px;
+  height: 100%;
+
+  img {
+    position: absolute;
+    bottom: 30px;
+    width: 161px;
+  }
+}

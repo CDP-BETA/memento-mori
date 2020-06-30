@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react'
 import { useStores } from 'stores'
+import { useHistory } from 'react-router-dom'
 import { observer } from 'mobx-react'
 import './answerBox.scss'
 
 const AnswerBox = observer(() => {
   const { dataStore } = useStores()
+  const history = useHistory()
   const { questionModel, stepNext, setUserAnswer, userAnswers } = dataStore
   const { stepKey, stepAnswers, answerIcons, selectedAnswerIcons } = questionModel
 
@@ -12,7 +14,7 @@ const AnswerBox = observer(() => {
 
   const setAnswer = (number) => {
     setUserAnswer(number)
-    stepNext()
+    stepNext(history)
   }
 
   const getHeight = () => {
@@ -24,14 +26,17 @@ const AnswerBox = observer(() => {
   //   setTimeout(() => {}, 2000)
   // },[userAnswer])
 
+  /**
+   * 남자=1, 여자=0, 있다=1, 없다=0
+   * */
   return (
     <div className={'answerBoxContainer'}>
-      <div className={userAnswer === 0 ? 'answerBox selected' : 'answerBox'} onClick={() => setAnswer(0)}  style={getHeight()}>
-        <img src={userAnswer === 0 ? selectedAnswerIcons[0] : answerIcons[0]} alt={'answer_icon1'} />
+      <div className={userAnswer === 1 ? 'answerBox selected' : 'answerBox'} onClick={() => setAnswer(1)}  style={getHeight()}>
+        <img src={userAnswer === 1 ? selectedAnswerIcons[0] : answerIcons[0]} alt={'answer_icon1'} />
         <p>{stepAnswers[0]}</p>
       </div>
-      <div className={userAnswer === 1 ? 'answerBox selected' : 'answerBox'} onClick={() => setAnswer(1)}  style={getHeight()}>
-        <img src={userAnswer === 1 ? selectedAnswerIcons[1] : answerIcons[1]} alt={'answer_icon2'} />
+      <div className={userAnswer === 0 ? 'answerBox selected' : 'answerBox'} onClick={() => setAnswer(0)}  style={getHeight()}>
+        <img src={userAnswer === 0 ? selectedAnswerIcons[1] : answerIcons[1]} alt={'answer_icon2'} />
         <p>{stepAnswers[1]}</p>
       </div>
     </div>

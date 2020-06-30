@@ -5,7 +5,7 @@ import { Router, Route, Switch } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 import { stores } from 'stores'
 
-import { HomePage, QuestionPage } from './pages'
+import { HomePage, QuestionPage, ResultPage } from './pages'
 
 const browserHistory = createBrowserHistory()
 const hydrate = create()
@@ -32,6 +32,7 @@ const App = observer(() => {
           <Switch>
             <Route exact path={'/'} component={HomePage} />
             <Route path={'/question'} component={QuestionPage} />
+            <Route path={'/result'} component={ResultPage} />
           </Switch>
         ) : null}
       </Router>
