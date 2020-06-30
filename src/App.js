@@ -18,7 +18,7 @@ const App = observer(() => {
 
   React.useEffect(() => {
     const load = async () => {
-      await hydrate('dataStore', stores.dataStore).then(() => {
+      await hydrate('userStore', stores.userStore).then(() => {
         store.setStoreLoaded(true)
       })
     }

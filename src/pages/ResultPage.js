@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useStores } from 'stores'
-import { useHistory } from 'react-router-dom'
+import { useHistory, useRouteMatch } from 'react-router-dom'
 import { ResultTitle, ResultInfos, Reference } from 'components/Result'
 import './resultPage.scss'
 
@@ -10,10 +10,12 @@ import { observer } from 'mobx-react'
 const ResultPage = observer(() => {
   const { dataStore } = useStores()
   const history = useHistory()
+  const match = useRouteMatch()
   if(dataStore.result.age === null) {
     alert('문항을 제대로 입력해주세요.')
     history.replace('/')
   }
+  console.log(history)
 
   return (
     <div className={'resultPage'}>
