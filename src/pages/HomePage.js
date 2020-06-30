@@ -1,10 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { observer } from 'mobx-react'
+import { useStores } from 'stores'
 import ainizeLogo from 'assets/images/ainize_logo@2x.png'
 import './homePage.scss'
 
 const HomePage = observer(() => {
+  const { appStore } = useStores()
+  appStore.setBaseUrl(window.location.href)
+
   return (
     <div className={'homePage'}>
       <div className={'titleContainer'}><p className={'title'}>당신의 사망 나이를<br/> 측정합니다.</p></div>
