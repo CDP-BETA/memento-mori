@@ -1,5 +1,6 @@
 import React from 'react'
 import { useStores } from 'stores'
+import shareIcon from 'assets/images/share_btn.png'
 
 const ShareButton = () => {
   const { appStore } = useStores()
@@ -18,7 +19,7 @@ const ShareButton = () => {
 
   return (
     <div className={'shareContainer'}>
-
+      <img src={shareIcon} alt={'share_btn'}/>
     </div>
   )
 }
