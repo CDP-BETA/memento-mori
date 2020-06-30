@@ -8,25 +8,26 @@
   align-items: center;
   color: #ffffff;
   text-align: left;
-  padding: 0 3rem;
+  padding: 0 42.5px;
   font-weight: normal;
   max-width: 700px;
   max-height: 1400px;
   height: 100%;
 
   .title {
-    margin-top: 10rem;
+    margin-top: 6.25rem;
     margin-bottom: 0;
     //padding: 224px 0;
-    font-size: 1.9rem;
+    font-size: 2.1rem;
     line-height: 1.33;
     letter-spacing: normal;
     font-family: 'IropkeBatang', serif;
-    text-shadow: 1.9px 1.6px 6px #160e18;
+    text-shadow: 1.9px 1.6px 4px #160e18;
+    -webkit-text-stroke: 0.5px #ffffff;
   }
   .subTitle {
-    margin-top: 34px;
-    font-size: 0.7rem;
+    margin-top: 2.25rem;
+    font-size: 0.8rem;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.67;
@@ -34,10 +35,10 @@
   }
 
   .startBtn {
-    width: 150px;
-    height: 50px;
-    line-height: 50px;
-    margin-top: 4rem;
+    width: 216px;
+    height: 74px;
+    line-height: 74px;
+    margin-top: 5.3rem;
     //padding-left: 10px;
     background: url("../assets/images/start_btn@2x.png") no-repeat;
     background-size: contain;
@@ -46,13 +47,15 @@
     color: #fff;
 
     p {
-      margin: 0 0 0 10px;
+      margin: 0 0 0 40px;
+      font-size: 26.5px;
+      font-weight: normal;
     }
   }
   .ainizeLogo {
     position: absolute;
     bottom: 30px;
-    width: 108px;
+    width: 161px;
     //margin-bottom: 20px;
   }
 }
