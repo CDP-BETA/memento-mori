@@ -1,0 +1,16 @@
+.stepContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  img {
+    width: 45px;
+  }
+  p {
+    margin: 0 36px;
+    font-size: 31px;
+    font-weight: bold;
+    color: #f4ac90;
+  }
+}

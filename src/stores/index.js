@@ -1,10 +1,12 @@
 import React from 'react'
 import AppStore from './AppStore'
 import UserStore from './UserStore'
+import DataStore from './DataStore'
 
 export const stores = {
   appStore: new AppStore(),
   userStore: new UserStore(),
+  dataStore: new DataStore()
 }
 
 export const storesContext = React.createContext({

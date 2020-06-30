@@ -1,12 +1,17 @@
 import React from 'react'
-import Header from '../components/Header/Header'
-import { Router } from 'react-router-dom'
+import Header from 'components/Header/Header'
+import { StepNumber, Question, AnswerBox, StepContainer } from 'components/Questions'
+import './questionPage.scss'
 
 const QuestionPage = () => {
   return (
     <div className={'questionPage'}>
       <Header />
-      Question Page
+      <StepNumber />
+      <Question />
+      <hr/>
+      <AnswerBox />
+      <StepContainer />
     </div>
   )
 }
