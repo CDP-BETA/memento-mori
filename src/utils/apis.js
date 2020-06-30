@@ -1,5 +1,5 @@
 import axiosApi from './axios'
 
-export const testApi = (data) => {
-  return axiosApi('/test', 'POST', data, {})
+export const predictDeath = (data) => {
+  return axiosApi('http://13.124.19.19/predict', 'POST', data, {})
 }
