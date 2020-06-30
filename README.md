@@ -24,7 +24,7 @@ Memento mori는 라틴어로 "자신이 언젠가 죽는 존재임을 잊지마�
 
 | 항목         | 조작적 정의에 사용된 진단 명                                 |
 | ------------ | ------------------------------------------------------------ |
-| 폐 관련 질병 | PNEUMONIA, PNEUMONIA;TELEMETRY, PULMONARY EMBOLISM, PULMONARY EMBOLIS, URINARY TRACT INFECTION;PYELONEPHRITIS |
+| 폐 관련 질병 | PNEUMONIA, PNEUMONIA;TELEMETRY, PULMONARY EMBOLISM, </br>PULMONARY EMBOLIS, URINARY TRACT INFECTION;PYELONEPHRITIS |
 | 고혈압       | HYPOTENSION, HYPERKALEMIA                                    |
 | 가슴통증     | CHEST PAIN, CHEST PAIN\CATH                                  |
 | 호흡기 장애  | SEIZURE,RESPIRATIORY FAILURE, ASTHMA/COPD EXACERBATION       |
@@ -32,11 +32,11 @@ Memento mori는 라틴어로 "자신이 언젠가 죽는 존재임을 잊지마�
 | 당뇨병       | DIABETIC KETOACIDOSIS                                        |
 | 저혈당       | HYPOGLYCEMIA                                                 |
 | 열           | FEVER                                                        |
-| 심혈관 질환  | CONGESTIVE HEART FAILURE, ACUTE MYOCARDIAL INFARCTION, ACUTE MYOCARDIAL INFARCTION\\CATH, STROKE |
+| 심혈관 질환  | CONGESTIVE HEART FAILURE, ACUTE MYOCARDIAL INFARCTION, </br> ACUTE MYOCARDIAL INFARCTION\\CATH, STROKE |
 | 복통         | ABDOMINAL PAIN                                               |
 | 췌장염       | PANCREATITIS                                                 |
 
-
+-------------------------------
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
