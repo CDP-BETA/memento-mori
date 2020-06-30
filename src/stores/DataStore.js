@@ -1,4 +1,4 @@
-import { action, observable } from 'mobx'
+import { action, observable, toJS } from 'mobx'
 import QuestionModel from './model/QuestionModel'
 import { predictDeath } from 'utils/apis'
 
@@ -38,7 +38,7 @@ export default class DataStore {
       }
     }
     const answers = {
-      answer: this.userAnswers
+      answer: toJS(this.userAnswers)
     }
     return await predictDeath(answers)
   }
@@ -46,10 +46,13 @@ export default class DataStore {
   @action
   stepNext = (history) => {
     if(this.step === 12) {
-      this.verifyAnswers().then((data ) => {
+      this.verifyAnswers().then((data) => {
         this.result = data
         history.push('/result')
       })
+        .catch((err) => {
+          console.log(err)
+        })
       return
     }
     this.step += 1
