@@ -25,7 +25,7 @@ export default class QuestionModel {
         selectedAnswerIcons: [manSelectIcon, womanSelectIcon]
       },
       {
-        question: '난 폐렴이',
+        question: '난 폐 질환이',
         key: 'pneumonia',
         answers: ['있다', '없다'],
         answerIcons: [oNormalIcon, xNormalIcon],
@@ -46,7 +46,7 @@ export default class QuestionModel {
         selectedAnswerIcons: [oSelectIcon, xSelectIcon]
       },
       {
-        question: '난 호흡기 장애가',
+        question: '난 호흡기 질환이',
         key: 'respiratory_failure',
         answers: ['있다', '없다'],
         answerIcons: [oNormalIcon, xNormalIcon],
@@ -82,7 +82,7 @@ export default class QuestionModel {
         selectedAnswerIcons: [oSelectIcon, xSelectIcon]
       },
       {
-        question: '난 심혈관질환이',
+        question: '난 심혈관 질환이',
         key: 'cardiovascular_disease',
         answers: ['있다', '없다'],
         answerIcons: [oNormalIcon, xNormalIcon],
