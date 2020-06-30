@@ -6,7 +6,7 @@ Memento mori는 라틴어로 "자신이 언젠가 죽는 존재임을 잊지마�
 성별, 결혼유무, 질병의 유무만 알려주시면 인공지능이 사망할 나이를 예측해드립니다.
 내가 사망할 나이를 기억함으로써 신이 아닌 인간일 뿐임을 잊지말고 공손해지시길 바랍니다.
 
-본 인공지능 모델은 [MIT Lab for Computational Physiology](https://lcp.mit.edu/)에서 제공하는 [Critical Care Database MIMIC-III](https://mimic.physionet.org/)을 이용하여 학습되었습니다. 2001~2012년간 수집된 Critical Care Patient 데이터이기에 사망 나이 예측 결과가 예상보다 어린 나이로 나올 수 있음을 미리 알려드립니다. 자세한 설명은 [모델 상세정보](https://github.com/CDP-BETA/memento-mori/blob/master/README.md#%EC%82%AC%EB%A7%9D-%EB%82%98%EC%9D%B4-%EC%98%88%EC%B8%A1-%EB%AA%A8%EB%8D%B8)을 참고 바랍니다.
+본 인공지능 모델은 [MIT Lab for Computational Physiology](https://lcp.mit.edu/)에서 제공하는 [Critical Care Database MIMIC-III](https://mimic.physionet.org/)을 이용하여 학습되었습니다. 2001~2012년간 수집된 Critical Care Patient 데이터이기에 사망 나이 예측 결과가 예상보다 어린 나이로 나올 수 있음을 미리 알려드립니다. 자세한 설명은 [모델 상세정보](https://github.com/CDP-BETA/memento-mori/blob/master/README.md#%EB%AA%A8%EB%8D%B8-%EC%83%81%EC%84%B8-%EC%A0%95%EB%B3%B4)을 참고 바랍니다.
 
 #### 모델 상세 정보 
 
