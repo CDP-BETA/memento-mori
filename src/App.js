@@ -7,6 +7,7 @@ import { stores } from 'stores'
 
 import Header from 'components/Header/Header'
 import HomePage from './pages/HomePage'
+import QuestionPage from 'pages/QuestionPage'
 import TestPage from './pages/TestPage'
 import LoginPage from './pages/LoginPage'
 
@@ -31,10 +32,11 @@ const App = observer(() => {
   return (
     <Provider {...stores}>
       <Router history={browserHistory}>
-        <Header />
+        {/*<Header />*/}
         {store.storeLoaded ? (
           <Switch>
             <Route exact path={'/'} component={HomePage} />
+            <Route path={'/question'} component={QuestionPage} />
             <Route path={'/test'} component={TestPage} />
             <Route path={'/login'} component={LoginPage} />
           </Switch>

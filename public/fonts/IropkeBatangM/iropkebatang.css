@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'IropkeBatang';
+    font-weight: 500;
+    src: url(IropkeBatangM.eot);
+    src: url(IropkeBatangM.eot?#iefix) format('embedded-opentype'),
+    url(IropkeBatangM.woff) format('woff'),
+    url(IropkeBatangM.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'IropkeBatang';
+    font-weight: 700;
+    src: url(IropkeBatangM.eot);
+    src: url(IropkeBatangM.eot?#iefix) format('embedded-opentype'),
+    url(IropkeBatangM.woff) format('woff'),
+    url(IropkeBatangM.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'IropkeBatang';
+    font-weight: 800;
+    src: url(IropkeBatangM.eot);
+    src: url(IropkeBatangM.eot?#iefix) format('embedded-opentype'),
+    url(IropkeBatangM.woff) format('woff'),
+    url(IropkeBatangM.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'IropkeBatang';
+    font-weight: 300;
+    src: url(IropkeBatangM.eot);
+    src: url(IropkeBatangM.eot?#iefix) format('embedded-opentype'),
+    url(IropkeBatangM.woff) format('woff'),
+    url(IropkeBatangM.ttf) format('truetype');
+}
