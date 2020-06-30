@@ -7,6 +7,6 @@ export default class AppStore {
 
   @action
   setBaseUrl = (url) => {
-    this.baseUrl = url
+    this.baseUrl = url.toString()
   }
 }

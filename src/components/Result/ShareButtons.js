@@ -1,13 +1,16 @@
 import React from 'react'
 import { useStores } from 'stores'
 import shareIcon from 'assets/images/share_btn.png'
+import './shareButtons.scss'
 
 const ShareButton = () => {
   const { appStore } = useStores()
 
-  const clickShare = () => {
+  const clickShare = async () => {
+    console.log('navigator')
     if (navigator.share) {
-      navigator.share({
+      alert('navigator on')
+      await navigator.share({
         title: '사망예측기',
         url: appStore.baseUrl
       }).then(() => {
@@ -19,7 +22,7 @@ const ShareButton = () => {
 
   return (
     <div className={'shareContainer'}>
-      <img src={shareIcon} alt={'share_btn'} onClick={() => clickShare()}/>
+      <button onClick={async () => await clickShare()}><img src={shareIcon} alt={'share_btn'}/></button>
     </div>
   )
 }
