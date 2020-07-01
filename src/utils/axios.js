@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { stores } from 'stores'
 
-let URL = process.env.NODE_ENV !== 'production' ? 'http://localhost' : 'http://localhost'
+let URL = process.env.NODE_ENV !== 'production' ? 'http://localhost:8080' : 'http://localhost:8080'
 
 const axiosApi = (url, method = 'GET', data, options = {}) => {
   data = method.toUpperCase() === 'GET' ? { params: { ...data } } : { data }
