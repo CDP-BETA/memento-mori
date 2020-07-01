@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { stores } from 'stores'
 
-let URL = process.env.NODE_ENV !== 'production' ? 'http://localhost:8888' : 'http://localhost:8888'
+let URL = process.env.NODE_ENV !== 'production' ? 'https://memento-mori-zzerjae.endpoint.ainize.ai' : 'https://memento-mori-zzerjae.endpoint.ainize.ai'
 
 const axiosApi = (url, method = 'GET', data, options = {}) => {
   data = method.toUpperCase() === 'GET' ? { params: { ...data } } : { data }
