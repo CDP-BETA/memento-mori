@@ -1,5 +1,7 @@
 # MEMENTO MORI
 
+[![Run on Ainize](https://ainize.ai/static/images/run_on_ainize_button.svg)](https://ainize.web.app/redirect?git_repo=github.com/CDP-BETA/memento-mori)
+
 Memento mori는 라틴어로 "자신이 언젠가 죽는 존재임을 잊지마라" 뜻을 가지고 있습니다.
 
 이를 쉽게 실천할 수 있도록 도와드리겠습니다.</br> 
