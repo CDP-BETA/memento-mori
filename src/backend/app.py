@@ -56,8 +56,8 @@ def predict():
     pred_age = get_age([req_data], model)
     shaps = get_shap([req_data], model)
 
-    causes = []    
-    
+    causes = []
+
     for shap in shaps:
         cause = ""
 
@@ -86,11 +86,12 @@ def predict():
             cause += f"수명이 {round(abs(shap[2]), 1)}살 연장되었습니다."
         else:
             cause += f"수명이 {round(abs(shap[2]), 1)}살 단축되었습니다."
-        
+
         causes.append(cause)
 
     return {'age': round(pred_age*100, 1), 'shap': causes}, 200
 
 if __name__ == '__main__':
     model = joblib.load('/app/model.pkl')
+#     model = joblib.load('./model.pkl')  # for local test
     app.run(debug=False, port=8080, host='0.0.0.0')
