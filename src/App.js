@@ -17,6 +17,8 @@ const App = observer(() => {
   }))
 
   React.useEffect(() => {
+    window.Kakao.init(process.env.REACT_APP_KAKAO_KEY)
+    console.log(Kakao.isInitialized() && 'kakao initialized.')
     const load = async () => {
       await hydrate('userStore', stores.userStore).then(() => {
         store.setStoreLoaded(true)

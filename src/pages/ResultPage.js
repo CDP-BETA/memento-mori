@@ -10,18 +10,18 @@ import { observer } from 'mobx-react'
 const ResultPage = observer(() => {
   const { dataStore } = useStores()
   const history = useHistory()
-  if(dataStore.result.age === null) {
-    alert('문항을 제대로 입력해주세요.')
-    history.replace('/')
-  }
+  // if (dataStore.result.age === null) {
+  //   alert('문항을 제대로 입력해주세요.')
+  //   history.replace('/')
+  // }
 
   return (
     <div className={'resultPage'}>
       <ResultTitle />
       <ResultInfos />
+      <ShareButtons />
       <Reference />
       <img className={'ainizeLogo'} src={ainizeLogo} alt={'ainize_logo'} />
-      {/*<ShareButtons />*/}
     </div>
   )
 })

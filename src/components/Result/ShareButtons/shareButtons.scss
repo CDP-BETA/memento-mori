@@ -1,0 +1,27 @@
+.shareContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  position: absolute;
+  bottom: 180px;
+
+  img {
+    width: 50px;
+  }
+}
+
+.kakaoBtn {
+  width: 51px;
+  height: 51px;
+  border: 0;
+  background: url("../../../assets/images/kakao.png") center center no-repeat;
+  background-size: cover;
+}
+
+.facebookBtn {
+  width: 51px;
+  height: 51px;
+  border: 0;
+  background: url("../../../assets/images/fackbook.png") center center no-repeat;
+  background-size: cover;
+}
