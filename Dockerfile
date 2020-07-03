@@ -48,6 +48,6 @@ ADD nginx.conf /etc/nginx/nginx.conf
 WORKDIR /app
 
 EXPOSE 8080
-EXPOSE 8888
+EXPOSE 80
 
 CMD ["./start.sh"]

@@ -6,7 +6,7 @@ const KakaoBtn = () => {
     console.log(window.Kakao.isInitialized())
     window.Kakao.Link.sendScrap({
       requestUrl: process.env.REACT_APP_BASE_URL,
-      // requestUrl: 'http://626593721a3b.ngrok.io',
+      // requestUrl: 'http://70b108f07aba.ngrok.io',
       fail: function (err) {
         console.log(err)
         // alert(JSON.stringify(err))
