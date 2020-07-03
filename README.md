@@ -19,7 +19,7 @@ Memento mori는 라틴어로 "자신이 언젠가 죽는 존재임을 잊지마�
 | 데이터 소스           | [MIMIC-III](https://mimic.physionet.org/)                    |
 | 모델                  | [LightGBM](https://github.com/microsoft/LightGBM)            |
 | 사용된 Feature        | 성별, 결혼유무, 진단코드                                     |
-| 성능 평가             | MSE : 2.2242<br />R2 Score : 5.8752                          |
+| 성능 평가             | MSE : 2.2242                          |
 | 학습에 사용된 환자 수 | 전체 환자 수 : 14,279<br />무질병 환자 수 : 12,390<br />유질병 환자 수 : 1,889 |
 
 사용된 Feature 중 진단코드는 가장 많이 사용된 상위 100개의 진단명 중 선별하여 특정 진단명으로 묶는 조작적정의를 진행하였습니다. 진단명 조작적 정의는 아래와 같습니다.
