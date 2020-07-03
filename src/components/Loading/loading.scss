@@ -1,0 +1,22 @@
+.loadingContainer {
+  position: fixed;
+  top: 0;
+  display: none;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 1s opacity;
+
+  &.isLoading {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    z-index: 100;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
+    .loadingBar {
+      position: absolute;
+      top: 40%;
+    }
+  }
+}

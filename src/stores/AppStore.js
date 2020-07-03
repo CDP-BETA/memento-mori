@@ -3,4 +3,10 @@ import { persist } from 'mobx-persist'
 
 export default class AppStore {
   @persist @observable appInfo = {}
+  @observable loading = false
+
+  @action
+  setLoading = (load) => {
+    this.loading = load
+  }
 }
