@@ -6,6 +6,8 @@ export default class DataStore {
   @observable step
   @observable userAnswers
   @observable result
+  @observable errMsg
+  @observable predictErr
   constructor() {
     this.step = 0
     this.totalStep = 13
@@ -23,35 +25,39 @@ export default class DataStore {
       mace: null,
       abdominal_pain: null,
       pancreatitis: null,
-      married: null
+      married: null,
     }
     this.result = {
       age: null,
-      shap: []
+      shap: [],
     }
+    this.predictErr = false
+    this.errMsg = ''
   }
 
   verifyAnswers = async () => {
-    for(let key in this.userAnswers) {
+    for (let key in this.userAnswers) {
       if (typeof this.userAnswers[key] !== 'number') {
         return false
       }
     }
     const answers = {
-      answer: toJS(this.userAnswers)
+      answer: toJS(this.userAnswers),
     }
     return await predictDeath(answers)
   }
 
   @action
   stepNext = (history) => {
-    if(this.step === 12) {
-      this.verifyAnswers().then((data) => {
-        this.result = data
-        history.push('/result')
-      })
+    if (this.step === 12) {
+      this.verifyAnswers()
+        .then((data) => {
+          this.result = data
+          history.push('/result')
+        })
         .catch((err) => {
-          console.log(err)
+          this.predictErr = true
+          this.errMsg = err
         })
       return
     }
@@ -61,7 +67,7 @@ export default class DataStore {
 
   @action
   stepBack = () => {
-    if(this.step === 0) return
+    if (this.step === 0) return
     this.step -= 1
     this.questionModel.setStepQuestion(this.step)
   }
