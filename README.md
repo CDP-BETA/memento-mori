@@ -19,7 +19,7 @@ Memento mori는 라틴어로 "자신이 언젠가 죽는 존재임을 잊지마�
 | 데이터 소스           | [MIMIC-III](https://mimic.physionet.org/)                    |
 | 모델                  | [LightGBM](https://github.com/microsoft/LightGBM)            |
 | 사용된 Feature        | 성별, 결혼유무, 진단코드                                     |
-| 성능 평가             | MSE : 2.2242<br />R2 Score : 5.8752                          |
+| 성능 평가             | MSE : 2.2242                          |
 | 학습에 사용된 환자 수 | 전체 환자 수 : 14,279<br />무질병 환자 수 : 12,390<br />유질병 환자 수 : 1,889 |
 
 사용된 Feature 중 진단코드는 가장 많이 사용된 상위 100개의 진단명 중 선별하여 특정 진단명으로 묶는 조작적정의를 진행하였습니다. 진단명 조작적 정의는 아래와 같습니다.
@@ -44,12 +44,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## React-Mobx-Boilerplate
 
-#### This project is made of React + Mobx + customize-cra + scss.
+#### This project is made of React(with customize-cra) + Mobx + scss.
 
 ### 1. clone this project.
 
 Run 
-```git clone https://github.com/zerone2/react-mobx-boilerplate```
+```git clone https://github.com/CDP-BETA/memento-mori```
 
 ### 2. yarn 
 
@@ -79,37 +79,3 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 you can set webpack settings in config-overrides.js
 
-
----
-
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
