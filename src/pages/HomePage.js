@@ -1,10 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { observer } from 'mobx-react'
-import ainizeLogo from 'assets/images/ainize_logo@2x.png'
+import { useStores } from 'stores'
+import ainizeLogo from 'assets/images/ainize.png'
 import './homePage.scss'
 
 const HomePage = observer(() => {
+  const { dataStore } = useStores()
+  const resetQuestions = () => {
+    dataStore.initialize()
+  }
   return (
     <div className={'homePage'}>
       <div className={'titleContainer'}>
@@ -22,7 +27,7 @@ const HomePage = observer(() => {
           당신의 기대수명에 대해 알아볼까요?
         </p>
       </div>
-      <Link to={'/question'} className={'startBtn'}>
+      <Link to={'/question'} className={'startBtn'} onClick={() => resetQuestions()}>
         <p>시작하기</p>
       </Link>
       {/*<p>{`화면넓이: ${screen.availWidth}, 화면높이: ${screen.availHeight}`}</p>*/}
