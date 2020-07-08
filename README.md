@@ -73,7 +73,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### 4. Enjoy the boilerplate
+### 4. Enjoy Development and give us PR
 
 **Note: Please don't do eject. this is a one-way operation. Once you `eject`, you can’t go back!**
 
