@@ -34,6 +34,30 @@ export default class DataStore {
     this.predictErr = false
   }
 
+  initialize = () => {
+    this.step = 0
+    this.userAnswers = {
+      male: null,
+      pneumonia: null,
+      hypertension: null,
+      chest_pain: null,
+      respiratory_disorder: null,
+      anemia: null,
+      diabetes: null,
+      hypoglycemia: null,
+      fever: null,
+      mace: null,
+      abdominal_pain: null,
+      pancreatitis: null,
+      married: null,
+    }
+    this.result = {
+      age: null,
+      shap: [],
+    }
+    this.predictErr = false
+  }
+
   verifyAnswers = async () => {
     for (let key in this.userAnswers) {
       if (typeof this.userAnswers[key] !== 'number') {
