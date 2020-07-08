@@ -32,7 +32,6 @@ export default class DataStore {
       shap: [],
     }
     this.predictErr = false
-    this.errMsg = ''
   }
 
   verifyAnswers = async () => {
@@ -52,12 +51,18 @@ export default class DataStore {
     if (this.step === 12) {
       this.verifyAnswers()
         .then((data) => {
+          if (!data) {
+            this.predictErr = true
+            this.errMsg = '모든 항목을 반드시 체크해주셔야 됩니다!'
+            return false
+          }
           this.result = data
           history.push('/result')
         })
         .catch((err) => {
+          console.log('errMsg', err)
           this.predictErr = true
-          this.errMsg = err
+          this.errMsg = '네트워크 에러가 발생했습니다.\n곧 해결해겠습니다. 죄송합니다ㅜㅠㅠ'
         })
       return
     }

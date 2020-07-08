@@ -17,10 +17,9 @@ const AnswerBox = observer(() => {
     if (step === 12) appStore.setLoading(true)
     stepNext(history)
   }
-  if (predictErr) {
+  if (step === 12 && predictErr && errMsg) {
     appStore.setLoading(false)
-    console.log(errMsg)
-    alert('네트워크 에러가 발생했습니다.\n곧 해결해겠습니다. 죄송합니다ㅜㅠㅠ')
+    alert(errMsg)
   }
 
   const getHeight = () => {

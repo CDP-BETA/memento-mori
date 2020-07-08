@@ -5,16 +5,18 @@ import { ResultTitle, ResultInfos, Reference, ShareButtons } from 'components/Re
 import Loading from 'components/Loading'
 import './resultPage.scss'
 
-import ainizeLogo from 'assets/images/ainize_logo@2x.png'
+import ainizeLogo from 'assets/images/ainize.png'
+import githubLogo from 'assets/images/git.png'
 import { observer } from 'mobx-react'
+import Footer from 'components/Footer'
 
 const ResultPage = observer(() => {
   const { dataStore, appStore } = useStores()
   const history = useHistory()
-  if (dataStore.result.age === null) {
-    alert('문항을 제대로 입력해주세요.')
-    history.replace('/')
-  }
+  // if (dataStore.result.age === null) {
+  //   alert('문항을 제대로 입력해주세요.')
+  //   history.replace('/')
+  // }
 
   useEffect(() => {
     appStore.setLoading(false)
@@ -27,7 +29,7 @@ const ResultPage = observer(() => {
       <ResultInfos />
       <ShareButtons />
       <Reference />
-      <img className={'ainizeLogo'} src={ainizeLogo} alt={'ainize_logo'} />
+      <Footer />
     </div>
   )
 })
